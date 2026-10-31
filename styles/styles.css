@@ -1,0 +1,112 @@
+/* Setup Variabel Tema */
+:root {
+  --bg-color: #ffffff;
+  --text-color: #000000;
+  --card-bg: #ffffff;
+  --card-shadow: rgba(0, 0, 0, 0.1);
+  --accent-color: #00bdc4;
+  --primary-color: var(--accent-color);
+}
+
+/* Override pas Dark Mode aktif */
+body.dark-mode {
+  --bg-color: #121212;
+  --text-color: #ffffff;
+  --card-bg: #1e1e1e;
+  --card-shadow: rgba(0, 0, 0, 0.5);
+  --accent-color: #004C54;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  overflow: hidden;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
+  display: flex;
+  justify-content: center; /* Nengahin konten ala layar HP */
+  min-height: 100vh;
+
+  -webkit-user-select: none;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent; 
+}
+
+/* Reset basic biar margin bawaan browser ilang */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Font sans-serif yang clean */
+}
+
+
+/* Container utama */
+.menu-container {
+  display: flex;
+  flex-direction: column; /* Bikin isinya berjejer ke bawah */
+  align-items: center;
+  gap: 60px; /* Jarak antara Judul dan Tombol */
+  width: 100%;
+  padding: 20px;
+}
+
+/* Styling Judul */
+
+/* Container khusus buat tombol biar rapi */
+.button-group {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  gap: 20px; /* Jarak antar tombol */
+  width: 100%; /* `tombolnya nggak kepanjangan di layar gede */
+}
+
+/* Styling dasar tombol */
+.btn {
+  width: 100%;
+  padding: 20px 45px;
+  font-size: 1.2rem;
+  color: #ffffff;
+  border: none;
+  border-radius: 12px; /* Bikin ujungnya melengkung/rounded */
+  cursor: pointer;
+  transition: transform 0.1s ease;
+}
+
+/* Efek pas tombol di-tap (biar reactive) */
+.btn:active {
+  transform: scale(0.95);
+}
+
+
+.btn-pass {
+  background-color: var(--accent-color);
+  color: #000000;
+}
+
+body.dark-mode .btn-pass {
+  background-color: var(--accent-color);
+  color: #ffffff;
+}
+
+body.dark-mode .btn-settings {
+  background-color: var(--accent-color);
+  color: #ffffff;
+}
+
+.btn-settings {
+  background-color: var(--accent-color);
+  color: #000000;
+}

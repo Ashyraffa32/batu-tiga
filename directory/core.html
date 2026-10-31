@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Three Stones - Pass & Play</title>
+  <link rel="stylesheet" href="../styles/styles.css">
+  <link rel="stylesheet" href="../styles/game.css">
+</head>
+<body>
+   <!-- Modal Coin Flip & Username -->
+  <div id="coinModal" class="modal-overlay">
+    <div class="modal-card">
+      <h2>Setup Player</h2>
+      
+      <!-- Input Nama -->
+      <div class="name-inputs" style="margin-bottom: 20px;">
+        <input type="text" id="inputP1" class="custom-input" placeholder="Nama Player 1 (Biru)">
+        <input type="text" id="inputP2" class="custom-input" placeholder="Nama Player 2 (Abu)" style="margin-top: 10px;">
+      </div>
+
+      <p>Player 1, pilih tebakan koin anda:</p>
+      <div class="coin-btns">
+        <button id="btnHeads" class="bzn btn-picture">Gambar</button>
+        <button id="btnTails" class="bzn btn-number">Angka</button>
+      </div>
+      <p id="coinResult" class="coin-result"></p>
+      <button id="btnStartGame" class="btn btn-computer" style="display: none; margin-top: 15px;">Mulai Game</button>
+    </div>
+  </div>
+
+  <div class="game-container">
+    <header class="game-header">
+      <h2 id="turnIndicator" class="turn-text">Menunggu Undian...</h2>
+      <p id="phaseIndicator" class="phase-text">Fase: -</p>
+    </header>
+
+    <!-- Board 3x3 isinya cuma titik -->
+    <div class="board" id="gameBoard">
+      <div class="dot" data-index="0"></div>
+      <div class="dot" data-index="1"></div>
+      <div class="dot" data-index="2"></div>
+      <div class="dot" data-index="3"></div>
+      <div class="dot" data-index="4"></div>
+      <div class="dot" data-index="5"></div>
+      <div class="dot" data-index="6"></div>
+      <div class="dot" data-index="7"></div>
+      <div class="dot" data-index="8"></div>
+    </div>
+
+    <br>
+    <br>
+    <a href="../index.html" class="back-btn"><button>Kembali</button></a>
+
+  </div>
+
+  <script src="../logic/script.js"></script>
+  <script src="../logic/game.js"></script>
+</body>
+</html>

@@ -1,0 +1,94 @@
+.settings-container {
+  width: 100%;
+  max-width: 400px;
+  padding: 40px 20px;
+}
+
+/* Header & Tombol Back Reactive */
+.settings-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin-bottom: 40px;
+}
+
+.back-btn {
+  position: absolute;
+  left: 0;
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1rem;
+  transition: transform 0.1s ease; /* Biar ada efek pas ditap */
+}
+
+.back-btn:active {
+  transform: scale(0.9); /* Reactive feedback */
+}
+
+.settings-title {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+/* Card Style */
+.settings-card {
+  background-color: var(--card-bg);
+  padding: 20px 25px;
+  border-radius: 16px;
+  box-shadow: 0 4px 15px var(--card-shadow);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.setting-label {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+/* Toggle Switch Custom */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 54px;
+  height: 30px;
+}
+
+.switch input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: #e0e0e0;
+  transition: .4s;
+  border-radius: 34px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 22px;
+  width: 22px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: .4s;
+  border-radius: 50%;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Nambahin bayangan dikit di buletannya */
+}
+
+/* Pas di-tap jadi warna cyan */
+input:checked + .slider {
+  background-color: var(--primary-color);
+}
+
+input:checked + .slider:before {
+  transform: translateX(24px);
+}
